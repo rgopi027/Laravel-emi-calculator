@@ -19,7 +19,16 @@ class UsersTableSeeder extends Seeder
         	[
                 'name' => 'developer',
                 'email' => 'developer@test.com',
-                'password' => Hash::make('Test@Password123#'), // Encrypting the password
+                'password' => Hash::make('123'), // Encrypting the password
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+        ]);
+        DB::table('users')->insert([
+        	[
+                'name' => 'Gopi',
+                'email' => 'gopi@techcmantix.com',
+                'password' => Hash::make('demo1234'), // Encrypting the password
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
